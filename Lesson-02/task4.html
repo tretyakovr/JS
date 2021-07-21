@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        let a = +prompt('Введите 1 число');
+        let b = +prompt('Введите 2 число');
+
+        if (isNaN(a) || isNaN(b)) {
+            alert('Введены некорректные значения');
+        } else {
+            console.log(`Сумма чисел a и b равна ${sum(a, b)}`);
+            console.log(`Разность чисел a и b равна ${sub(a, b)}`);
+            console.log(`Произведение чисел a и b равно ${mul(a, b)}`);
+            console.log(`Частное чисел a и b равно ${div(a, b)}`);
+        }
+
+    </script>
+</body>
+
+</html>

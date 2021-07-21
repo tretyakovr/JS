@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function math_op(a, b, op) {
+            switch (op) {
+                case '+':
+                    return sum(a, b);
+                case '-':
+                    return sub(a, b);
+                case '*':
+                    return mul(a, b);
+                case '/':
+                    return div(a, b);
+            }
+
+            return `Не распознанный оператор ${op}`
+        }
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        let a = +prompt('Введите 1 число');
+        let b = +prompt('Введите 2 число');
+        let op = prompt('Введите символ арифметической операции (+, -, *, /)')
+
+        if (isNaN(a) || isNaN(b)) {
+            alert('Введены некорректные значения');
+        } else {
+            console.log(`${a} ${op} ${b} = ${math_op(a, b, op)}`);
+        }
+
+    </script>
+</body>
+
+</html>

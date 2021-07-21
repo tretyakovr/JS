@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function getLastDigit(n) {
+            // Нашел вот такой вариант получения последнего символа в строке
+            return +n.slice(-1)
+        }
+
+        let n = prompt('Введите число')
+
+        if (n == '' || isNaN(n)) {
+            alert('Введено некорректное значение!')
+        } else {
+            let lastDigit = getLastDigit(n);
+
+            // Здесь использовал группировку case
+            switch (lastDigit) {
+                case 0:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Ваша сумма в ${n} рублей успешно зачислена`);
+                    break;
+                case 1:
+                    alert(`Ваша сумма в ${n} рубль успешно зачислена`);
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    alert(`Ваша сумма в ${n} рубля успешно зачислена`);
+                    break;
+                default:
+                    alert('?? ' + lastDigit)
+            }
+        }
+    </script>
+</body>
+
+</html>
